@@ -1,0 +1,269 @@
+/* =========================
+   1. GENERAL PAGE
+   ========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+/* =========================
+   2. HEADER AND TITLE
+   ========================= */
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+
+/* =========================
+   3. NAVIGATION
+   ========================= */
+
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 8px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+
+/* =========================
+   4. MAIN CONTENT
+   ========================= */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.content-section {
+    background-color: white;
+    margin: 25px 0;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.content-section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+}
+
+
+/* =========================
+   5. LISTS
+   ========================= */
+
+ul,
+ol {
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   6. TABLE
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+
+/* =========================
+   7. PHOTOS / IMAGE GALLERY
+   ========================= */
+
+.photo-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.photo-gallery img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   8. VIDEO
+   ========================= */
+
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   9. AUDIO
+   ========================= */
+
+audio {
+    width: 100%;
+    max-width: 600px;
+}
+
+
+/* =========================
+   10. CONTACT FORM
+   ========================= */
+
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   11. SUBMIT BUTTON
+   ========================= */
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+/* =========================
+   12. EXTERNAL LINK
+   ========================= */
+
+#resources a {
+    color: blue;
+    text-decoration: underline;
+}
+
+#resources a:hover {
+    color: #555;
+}
+
+
+/* =========================
+   13. FOOTER
+   ========================= */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   14. SMALL SCREENS / MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .photo-gallery {
+        display: block;
+    }
+
+    .photo-gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    section {
+        padding: 15px;
+    }
+}

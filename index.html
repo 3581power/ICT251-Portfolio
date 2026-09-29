@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My First Web Page</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Welcome to My Web Page</h1>
+
+        <p>Introduction to Web Technologies</p>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#learning">My Learning Plan</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ABOUT ME -->
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                My name is Bwalya Musonda and I am a student studying
+                Bachelor of Science in Computer Science at Mulungushi
+                University. I am currently learning web technologies
+                and developing my skills in HTML, CSS and other
+                technologies used to create websites. I enjoy learning
+                new computer skills and I hope to become a successful
+                computer scientist in the future.
+            </p>
+
+            <p>
+                <strong>Student Number:</strong> 202503581
+            </p>
+
+        </section>
+
+
+        <!-- HOBBIES -->
+        <section id="hobbies">
+
+            <h2>My Hobbies</h2>
+
+            <ul>
+                <li>Watching soccer</li>
+                <li>Singing</li>
+                <li>Watching movies</li>
+            </ul>
+
+            <h3>Tips to Improve My Web Skills</h3>
+
+            <ol>
+                <li>Practice HTML and CSS regularly.</li>
+                <li>Build small websites to improve my skills.</li>
+                <li>Learn from tutorials and practise what I learn.</li>
+            </ol>
+
+        </section>
+
+
+        <!-- LEARNING PLAN -->
+        <section id="learning">
+
+            <h2>My Learning Plan</h2>
+
+            <table>
+
+                <caption>My Weekly Web Learning Plan</caption>
+
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Topic</th>
+                        <th>Practice Task</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML</td>
+                        <td>Practise creating web pages</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS</td>
+                        <td>Practise styling a webpage</td>
+                    </tr>
+
+                    <tr>
+                        <td>Friday</td>
+                        <td>Web Technologies</td>
+                        <td>Create and test a small website</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- PHOTOS -->
+        <section id="photos">
+
+            <h2>My Photos</h2>
+
+            <div class="photo-gallery">
+
+                <figure>
+                    <img src="images/photo1.jpeg"
+                         alt="A photo showing my first activity">
+                    <figcaption>My First Photo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/photo2.jpeg"
+                         alt="A photo showing my second activity">
+                    <figcaption>My Second Photo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/photo3.jpeg"
+                         alt="A photo showing my third activity">
+                    <figcaption>My Third Photo</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- MEDIA -->
+        <section id="media">
+
+            <h2>My Media</h2>
+
+            <h3>My Introduction Video</h3>
+
+            <video controls>
+                <source src="video/intro.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+
+            <p>
+                This video introduces myself, my programme and one web
+                technology skill that I hope to improve.
+            </p>
+
+
+            <h3>My Hobby Audio</h3>
+
+            <audio controls>
+                <source src="video/voice.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p>
+                This audio recording describes one of my hobbies.
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact">
+
+            <h2>Contact Me Via</h2>
+
+           <section id="contact">
+
+    <p><strong>Email:</strong> bwalyamusondaq@gmail.com</p>
+    <p><strong>Phone:</strong> 0766903581</p>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5"
+                  placeholder="Enter your message here..."></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+        </section>
+
+
+        <!-- EXTERNAL LINK -->
+        <section id="resources">
+
+            <h2>Web Development Resource</h2>
+
+            <p>
+                Learn more about web development from
+                <a href="https://developer.mozilla.org/en-US/docs/Learn"
+                   target="_blank">
+                    MDN Web Development Resources
+                </a>.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            ICT251 Web Technologies | Activity 2
+        </p>
+
+        <p>
+            Bwalya Musonda | Student Number: 202503581
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
