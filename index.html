@@ -15,9 +15,12 @@
 
     <!-- HEADER -->
     <header>
-        <h1>Welcome to My Web Page</h1>
-
-        <p>Introduction to Web Technologies</p>
+       <!-- HEADER -->
+<header>
+  <h1>BWALYA MUSONDA</h1>
+  <p>BSc Computer Science — Mulungushi University</p>
+  <p>ICT251 — Introduction to Web Technologies</p>
+</header>
     </header>
 
 
@@ -29,11 +32,23 @@
         <a href="#photos">My Photos</a>
         <a href="#media">My Media</a>
         <a href="#contact">Contact</a>
+        <a href="#projects">Projects</a>
     </nav>
 
 
     <!-- MAIN CONTENT -->
     <main>
+
+  <!-- INTRO / HERO -->
+  <section id="intro" class="hero">
+    <h2>Welcome to My Portfolio</h2>
+    <p>
+      I am a first-year Computer Science student passionate about web development.
+      This site showcases my journey, hobbies, learning plan and projects as I
+      grow in ICT.
+    </p>
+    <a href="#projects" class="btn">View My Projects</a>
+  </section>
 
         <!-- ABOUT ME -->
         <section id="about">
@@ -119,40 +134,129 @@
                 </tbody>
 
             </table>
+            <h3>Study Hours Calculator</h3>
+<p>Enter how many hours you plan to study per day, and how many days per week.</p>
+
+<div class="calculator">
+  <label for="hours-per-day">Hours per day:</label>
+  <input type="number" id="hours-per-day" min="0" step="0.5" placeholder="e.g. 2">
+
+  <label for="days-per-week">Days per week (1–7):</label>
+  <input type="number" id="days-per-week" min="1" max="7" step="1" placeholder="e.g. 5">
+
+  <button id="calc-btn" type="button">Calculate</button>
+
+  <p id="calc-result" aria-live="polite"></p>
+</div>
+<!-- STUDY HOURS CALCULATOR -->
+<div class="calculator">
+  <h3>Study Hours Calculator</h3>
+  <p>Enter your planned study time to see your total weekly hours.</p>
+
+  <label for="hours-per-day">Hours per day:</label>
+  <input type="number" id="hours-per-day" min="0" step="0.5" placeholder="e.g. 2">
+
+  <label for="days-per-week">Days per week (1–7):</label>
+  <input type="number" id="days-per-week" min="1" max="7" step="1" placeholder="e.g. 5">
+
+  <button id="calc-btn" type="button">Calculate Weekly Hours</button>
+
+  <p id="calc-error" class="error"></p>
+  <p id="calc-result"></p>
+</div>
 
         </section>
+        <!-- PROJECTS / SKILLS -->
+<!-- PROJECTS / SKILLS -->
+<section id="projects">
+  <h2>My Projects &amp; Skills</h2>
+  <p>Click a button below to learn more about each skill.</p>
+
+  <div class="project-card">
+    <h3>1. HTML5 Structure</h3>
+    <p>I can build a well-structured web page using semantic tags.</p>
+
+    <button class="toggle-btn" data-target="details-html" aria-expanded="false">
+      Show details
+    </button>
+    <div class="details" id="details-html" hidden>
+      <p>
+        I use <code>header</code>, <code>nav</code>, <code>main</code>,
+        <code>section</code>, and <code>footer</code> to organise content.
+        I also add alt text to images and labels to form fields so the page
+        is accessible and easy to maintain.
+      </p>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>2. CSS Styling &amp; Responsive Design</h3>
+    <p>I can style pages and make them adapt to phones and desktops.</p>
+
+    <button class="toggle-btn" data-target="details-css" aria-expanded="false">
+      Show details
+    </button>
+    <div class="details" id="details-css" hidden>
+      <p>
+        I use external CSS with element, class and id selectors. I control the
+        box model with padding, margins and borders, and I use media queries
+        to change layout on small screens.
+      </p>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>3. JavaScript Interactivity</h3>
+    <p>I can add useful interactive features using JavaScript.</p>
+
+    <button class="toggle-btn" data-target="details-js" aria-expanded="false">
+      Show details
+    </button>
+    <div class="details" id="details-js" hidden>
+      <p>
+        I use JavaScript events, DOM updates and arrays to build features
+        such as form validation, photo galleries and this expandable
+        content panel.
+      </p>
+    </div>
+  </div>
+</section>
 
 
         <!-- PHOTOS -->
-        <section id="photos">
+<section id="photos">
+  <h2>My Photos</h2>
 
-            <h2>My Photos</h2>
+  <div class="photo-gallery">
+    <figure>
+      <img src="images/photo1.jpeg" alt="A photo showing my first activity">
+      <figcaption>My First Photo</figcaption>
+    </figure>
 
-            <div class="photo-gallery">
+    <figure>
+      <img src="images/photo2.jpeg" alt="A photo showing my second activity">
+      <figcaption>My Second Photo</figcaption>
+    </figure>
 
-                <figure>
-                    <img src="images/photo1.jpeg"
-                         alt="A photo showing my first activity">
-                    <figcaption>My First Photo</figcaption>
-                </figure>
+    <figure>
+      <img src="images/photo3.jpeg" alt="A photo showing my third activity">
+      <figcaption>My Third Photo</figcaption>
+    </figure>
+  </div>
 
-                <figure>
-                    <img src="images/photo2.jpeg"
-                         alt="A photo showing my second activity">
-                    <figcaption>My Second Photo</figcaption>
-                </figure>
+  <h3>Gallery Viewer</h3>
+  <div class="gallery-viewer">
+    <img id="gallery-image" src="images/photo1.jpeg"
+         alt="My First Photo" class="gallery-img">
+    <p id="gallery-caption">My First Photo</p>
 
-                <figure>
-                    <img src="images/photo3.jpeg"
-                         alt="A photo showing my third activity">
-                    <figcaption>My Third Photo</figcaption>
-                </figure>
-
-            </div>
-
-        </section>
-
-
+    <div class="gallery-controls">
+      <button id="prev-btn" type="button">← Previous</button>
+      <span id="gallery-counter">1 / 3</span>
+      <button id="next-btn" type="button">Next →</button>
+    </div>
+  </div>
+</section>
         <!-- MEDIA -->
         <section id="media">
 
@@ -186,30 +290,29 @@
 
 
         <!-- CONTACT -->
-        <section id="contact">
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p><strong>Email:</strong> bwalyamusondaq@gmail.com</p>
+  <p><strong>Phone:</strong> 0766903581</p>
+  <p><em>Browser demonstration only — no message is sent.</em></p>
 
-            <h2>Contact Me Via</h2>
+   <form id="contact-form" novalidate>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+    <span class="error" id="name-error"></span>
 
-           <section id="contact">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+    <span class="error" id="email-error"></span>
 
-    <p><strong>Email:</strong> bwalyamusondaq@gmail.com</p>
-    <p><strong>Phone:</strong> 0766903581</p>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    <span class="error" id="message-error"></span>
 
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <button type="submit">Send Message</button>
+  </form>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5"
-                  placeholder="Enter your message here..."></textarea>
-
-        <button type="submit">Submit</button>
-    </form>
-</section>
-
+  <div id="form-preview" aria-live="polite"></div>
         </section>
 
 
@@ -233,17 +336,18 @@
 
     <!-- FOOTER -->
     <footer>
-
-        <p>
-            ICT251 Web Technologies | Activity 2
-        </p>
-
-        <p>
-            Bwalya Musonda | Student Number: 202503581
-        </p>
-
+        <footer>
+  <p>ICT251 Web Technologies | Activity 3</p>
+  <p>Bwalya Musonda | Student Number: 202503581</p>
+  <p>
+    <a href="https://github.com/3581power" target="_blank" rel="noopener">
+      View Source on GitHub
+    </a>
+  </p>
+</footer>
     </footer>
 
+<script src="js/script.js" defer></script>
 </body>
 
 </html>

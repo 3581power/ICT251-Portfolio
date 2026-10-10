@@ -1,25 +1,42 @@
 /* =========================
+   0. COLOUR PALETTE (CSS Variables)
+   ========================= */
+:root {
+    --primary: #1e3a8a;
+    --primary-dark: #0f1f4d;
+    --accent: #f59e0b;
+    --bg: #f4f4f4;
+    --card: #ffffff;
+    --text: #222222;
+    --muted: #555555;
+    --border: #dddddd;
+}
+
+
+/* =========================
    1. GENERAL PAGE
    ========================= */
+html, body {
+    overflow-x: hidden;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #222;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 
 /* =========================
    2. HEADER AND TITLE
    ========================= */
-
 header {
-    background-color: #222;
+    background-color: var(--primary-dark);
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 30px 15px;
 }
 
 header h1 {
@@ -27,13 +44,17 @@ header h1 {
     font-size: 40px;
 }
 
+header p {
+    margin: 5px 0;
+    color: #cfd6ee;
+}
+
 
 /* =========================
    3. NAVIGATION
    ========================= */
-
 nav {
-    background-color: #333;
+    background-color: var(--primary);
     text-align: center;
     padding: 15px;
 }
@@ -43,43 +64,117 @@ nav a {
     text-decoration: none;
     margin: 0 12px;
     padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
 }
 
-nav a:hover {
-    background-color: #555;
+nav a:hover,
+nav a:focus {
+    background-color: var(--accent);
+    color: #222;
 }
 
 
 /* =========================
    4. MAIN CONTENT
    ========================= */
-
 main {
     width: 90%;
     max-width: 1100px;
     margin: auto;
 }
 
-.content-section {
-    background-color: white;
+main > section {
+    background-color: var(--card);
     margin: 25px 0;
     padding: 25px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
     border-radius: 8px;
 }
 
-.content-section h2 {
-    border-bottom: 2px solid #333;
+main > section h2 {
+    border-bottom: 2px solid var(--primary);
     padding-bottom: 8px;
+    color: var(--primary);
+}
+
+
+/* =========================
+   4b. HERO / INTRO SECTION (#id selector)
+   ========================= */
+#intro {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    text-align: center;
+    padding: 50px 25px;
+    border: none;
+}
+
+#intro h2 {
+    font-size: 32px;
+    margin-top: 0;
+    color: white;
+    border-bottom: none;
+}
+
+#intro p {
+    max-width: 700px;
+    margin: 15px auto;
+    font-size: 17px;
+}
+
+
+/* =========================
+   4c. HERO BUTTON
+   ========================= */
+.btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #222;
+    padding: 12px 28px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid var(--accent);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: white;
+    color: var(--primary);
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   4d. PROJECT CARDS
+   ========================= */
+.project-card {
+    background-color: #fafafa;
+    border-left: 5px solid var(--primary);
+    padding: 18px 20px;
+    margin: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.project-card p {
+    margin-bottom: 0;
 }
 
 
 /* =========================
    5. LISTS
    ========================= */
-
-ul,
-ol {
+ul, ol {
     margin-bottom: 20px;
 }
 
@@ -91,7 +186,6 @@ li {
 /* =========================
    6. TABLE
    ========================= */
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -104,15 +198,14 @@ caption {
     margin-bottom: 10px;
 }
 
-th,
-td {
-    border: 1px solid #555;
+th, td {
+    border: 1px solid var(--muted);
     padding: 12px;
     text-align: left;
 }
 
 th {
-    background-color: #333;
+    background-color: var(--primary);
     color: white;
 }
 
@@ -120,7 +213,6 @@ th {
 /* =========================
    7. PHOTOS / IMAGE GALLERY
    ========================= */
-
 .photo-gallery {
     display: flex;
     gap: 20px;
@@ -152,7 +244,6 @@ figcaption {
 /* =========================
    8. VIDEO
    ========================= */
-
 video {
     max-width: 100%;
     height: auto;
@@ -164,7 +255,6 @@ video {
 /* =========================
    9. AUDIO
    ========================= */
-
 audio {
     width: 100%;
     max-width: 600px;
@@ -174,7 +264,6 @@ audio {
 /* =========================
    10. CONTACT FORM
    ========================= */
-
 form {
     max-width: 600px;
 }
@@ -185,13 +274,13 @@ label {
     font-weight: bold;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
     margin-bottom: 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
 }
 
 textarea {
@@ -202,51 +291,86 @@ textarea {
 /* =========================
    11. SUBMIT BUTTON
    ========================= */
-
 button {
     padding: 12px 25px;
     border: none;
-    background-color: #333;
+    background-color: var(--primary);
     color: white;
     cursor: pointer;
+    border-radius: 6px;
 }
 
-button:hover {
-    background-color: #555;
+button:hover,
+button:focus {
+    background-color: var(--primary-dark);
 }
 
 
 /* =========================
    12. EXTERNAL LINK
    ========================= */
-
 #resources a {
-    color: blue;
+    color: var(--primary);
     text-decoration: underline;
 }
 
-#resources a:hover {
-    color: #555;
+#resources a:hover,
+#resources a:focus {
+    color: var(--accent);
 }
 
 
 /* =========================
    13. FOOTER
    ========================= */
-
 footer {
-    background-color: #222;
+    background-color: var(--primary-dark);
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 30px;
 }
 
+footer a {
+    color: var(--accent);
+}
+
 
 /* =========================
-   14. SMALL SCREENS / MOBILE
+   14. KEYBOARD FOCUS STATES
    ========================= */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
 
+
+/* =========================
+   15. TABLET BREAKPOINT
+   ========================= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    #intro h2 {
+        font-size: 26px;
+    }
+
+    .photo-gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* =========================
+   16. MOBILE BREAKPOINT
+   ========================= */
 @media (max-width: 600px) {
 
     nav a {
@@ -266,4 +390,234 @@ footer {
     section {
         padding: 15px;
     }
+}
+/* =========================
+   17. FORM VALIDATION ERRORS
+   ========================= */
+.error {
+    display: block;
+    color: #c0392b;
+    font-size: 14px;
+    margin-bottom: 10px;
+    min-height: 1em;
+}
+
+input.invalid,
+textarea.invalid {
+    border: 2px solid #c0392b;
+    background-color: #fdecea;
+}
+
+input.valid,
+textarea.valid {
+    border: 2px solid #27ae60;
+    background-color: #eafaf1;
+}
+
+#form-preview {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-left: 5px solid #27ae60;
+    background-color: #eafaf1;
+    border-radius: 6px;
+    display: none;
+}
+
+#form-preview.show {
+    display: block;
+}
+
+#form-preview h3 {
+    margin-top: 0;
+    color: #1e7a45;
+}
+
+#form-preview p {
+    margin: 6px 0;
+}
+/* =========================
+   18. EXPANDABLE CONTENT
+   ========================= */
+.toggle-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.toggle-btn:hover,
+.toggle-btn:focus {
+    background-color: var(--primary-dark);
+}
+
+.details {
+    margin-top: 12px;
+    padding: 12px 16px;
+    background-color: #f0f4ff;
+    border-left: 4px solid var(--primary);
+    border-radius: 4px;
+}
+
+.details p {
+    margin: 0;
+}
+/* =========================
+   19. GALLERY VIEWER
+   ========================= */
+.gallery-viewer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.gallery-img {
+    max-width: 100%;
+    width: 500px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--primary);
+    display: block;
+    margin: 0 auto 12px;
+}
+
+#gallery-caption {
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery-controls button {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.gallery-controls button:hover,
+.gallery-controls button:focus {
+    background-color: var(--primary-dark);
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.gallery-controls button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#gallery-counter {
+    font-weight: bold;
+    color: var(--primary);
+}
+/* =========================
+   20. STUDY HOURS CALCULATOR
+   ========================= */
+.calculator {
+    max-width: 500px;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #f0f4ff;
+    border-left: 5px solid var(--primary);
+    border-radius: 6px;
+}
+
+.calculator label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.calculator input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#calc-btn {
+    margin-top: 15px;
+    padding: 10px 22px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#calc-btn:hover,
+#calc-btn:focus {
+    background-color: var(--primary-dark);
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+#calc-result {
+    margin-top: 15px;
+    font-weight:
+    /* =========================
+   20. STUDY HOURS CALCULATOR
+   ========================= */
+.calculator {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f0f4ff;
+    border-left: 5px solid var(--primary);
+    border-radius: 6px;
+    max-width: 500px;
+}
+
+.calculator h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.calculator input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#calc-btn {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#calc-btn:hover,
+#calc-btn:focus {
+    background-color: var(--primary-dark);
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+#calc-result {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #27ae60;
+    min-height: 1.2em;
 }
