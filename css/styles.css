@@ -1,493 +1,282 @@
-/* =========================
-   0. COLOUR PALETTE (CSS Variables)
-   ========================= */
-:root {
-    --primary: #1e3a8a;
-    --primary-dark: #0f1f4d;
-    --accent: #f59e0b;
-    --bg: #f4f4f4;
-    --card: #ffffff;
-    --text: #222222;
-    --muted: #555555;
-    --border: #dddddd;
-}
-
-
-/* =========================
-   1. GENERAL PAGE
-   ========================= */
-html, body {
-    overflow-x: hidden;
+/* ===== GLOBAL & CHARCOAL BACKGROUND ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #2b2b2b; /* Charcoal Gray */
+    color: #e0e0e0;
     line-height: 1.6;
-    background-color: var(--bg);
-    color: var(--text);
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-
-/* =========================
-   2. HEADER AND TITLE
-   ========================= */
+/* ===== HEADER ===== */
 header {
-    background-color: var(--primary-dark);
-    color: white;
     text-align: center;
-    padding: 30px 15px;
+    padding: 40px 20px;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 40px;
+    color: #6ab0ff;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin: 5px 0;
-    color: #cfd6ee;
+    color: #aaaaaa;
+    font-size: 0.95rem;
 }
 
-
-/* =========================
-   3. NAVIGATION
-   ========================= */
+/* ===== NAVIGATION ===== */
 nav {
-    background-color: var(--primary);
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: #1f1f1f;
     padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #444;
 }
 
 nav a {
-    color: white;
+    color: #6ab0ff;
     text-decoration: none;
-    margin: 0 12px;
-    padding: 8px;
-    border-radius: 4px;
-    display: inline-block;
-}
-
-nav a:hover,
-nav a:focus {
-    background-color: var(--accent);
-    color: #222;
-}
-
-
-/* =========================
-   4. MAIN CONTENT
-   ========================= */
-main {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-main > section {
-    background-color: var(--card);
-    margin: 25px 0;
-    padding: 25px;
-    border: 1px solid var(--border);
+    font-weight: 600;
+    padding: 5px 10px;
     border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
 }
 
-main > section h2 {
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 8px;
-    color: var(--primary);
+nav a:hover {
+    background-color: #6ab0ff;
+    color: #1f1f1f;
 }
 
-
-/* =========================
-   4b. HERO / INTRO SECTION (#id selector)
-   ========================= */
-#intro {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
-    text-align: center;
-    padding: 50px 25px;
-    border: none;
+/* ===== SECTIONS ===== */
+section {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #444;
 }
 
-#intro h2 {
-    font-size: 32px;
-    margin-top: 0;
-    color: white;
-    border-bottom: none;
-}
-
-#intro p {
-    max-width: 700px;
-    margin: 15px auto;
-    font-size: 17px;
-}
-
-
-/* =========================
-   4c. HERO BUTTON
-   ========================= */
-.btn {
-    display: inline-block;
-    background-color: var(--accent);
-    color: #222;
-    padding: 12px 28px;
-    margin-top: 10px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    border: 2px solid var(--accent);
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: white;
-    color: var(--primary);
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
-
-
-/* =========================
-   4d. PROJECT CARDS
-   ========================= */
-.project-card {
-    background-color: #fafafa;
-    border-left: 5px solid var(--primary);
-    padding: 18px 20px;
-    margin: 15px 0;
-    border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
-
-.project-card h3 {
-    margin-top: 0;
-    color: var(--primary);
-}
-
-.project-card p {
-    margin-bottom: 0;
-}
-
-
-/* =========================
-   5. LISTS
-   ========================= */
-ul, ol {
+h2 {
+    color: #6ab0ff;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
-li {
-    margin-bottom: 8px;
+h3 {
+    color: #8cc4ff;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
+p { margin-bottom: 15px; }
+a { color: #6ab0ff; }
+ul, ol { margin-left: 20px; margin-bottom: 15px; }
+li { margin-bottom: 5px; }
 
-/* =========================
-   6. TABLE
-   ========================= */
+/* ===== HERO BUTTON ===== */
+.btn {
+    display: inline-block;
+    background-color: #6ab0ff;
+    color: #1f1f1f;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover { background-color: #8cc4ff; }
+
+/* ===== TABLE: ROYAL BLUE BORDERS + ROUNDED CORNERS ===== */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate; /* Needed for rounded corners */
+    border-spacing: 0;
+    border-radius: 12px;         /* Rounded edges */
+    overflow: hidden;            /* Keeps corners rounded */
     margin-top: 15px;
+    border: 2px solid #4169e1;   /* ROYAL BLUE outer border */
 }
 
 caption {
-    font-size: 20px;
-    font-weight: bold;
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    color: #aaaaaa;
     margin-bottom: 10px;
 }
 
 th, td {
-    border: 1px solid var(--muted);
-    padding: 12px;
+    padding: 12px 15px;
     text-align: left;
+    border-bottom: 2px solid #4169e1; /* ROYAL BLUE row lines */
+    border-right: 2px solid #4169e1;  /* ROYAL BLUE column lines */
 }
+
+th:last-child, td:last-child { border-right: none; }
+tr:last-child td { border-bottom: none; }
 
 th {
-    background-color: var(--primary);
-    color: white;
+    background-color: #2b2b2b;
+    color: #6ab0ff;
+    font-weight: 600;
 }
 
+tbody tr:hover { background-color: #2b2b2b; }
 
-/* =========================
-   7. PHOTOS / IMAGE GALLERY
-   ========================= */
-.photo-gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+/* ===== STUDY HOURS CALCULATOR ===== */
+.calculator {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 12px;
+    border: 1px solid #444;
+    max-width: 450px;
 }
 
-figure {
-    margin: 0;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.photo-gallery img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-figcaption {
-    text-align: center;
-    margin-top: 8px;
-}
-
-
-/* =========================
-   8. VIDEO
-   ========================= */
-video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
-}
-
-
-/* =========================
-   9. AUDIO
-   ========================= */
-audio {
-    width: 100%;
-    max-width: 600px;
-}
-
-
-/* =========================
-   10. CONTACT FORM
-   ========================= */
-form {
-    max-width: 600px;
-}
-
-label {
+.calculator label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 600;
+    color: #8cc4ff;
 }
 
-input, select, textarea {
+.calculator input {
     width: 100%;
     padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    font-family: inherit;
 }
 
-textarea {
-    resize: vertical;
+.calculator input:focus {
+    outline: none;
+    border-color: #6ab0ff;
 }
 
-
-/* =========================
-   11. SUBMIT BUTTON
-   ========================= */
-button {
-    padding: 12px 25px;
+.calculator button {
+    background-color: #6ab0ff;
+    color: #1f1f1f;
     border: none;
-    background-color: var(--primary);
-    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
-    border-radius: 6px;
+    font-family: inherit;
+    transition: background 0.3s;
 }
 
-button:hover,
-button:focus {
-    background-color: var(--primary-dark);
-}
+.calculator button:hover { background-color: #8cc4ff; }
 
-
-/* =========================
-   12. EXTERNAL LINK
-   ========================= */
-#resources a {
-    color: var(--primary);
-    text-decoration: underline;
-}
-
-#resources a:hover,
-#resources a:focus {
-    color: var(--accent);
-}
-
-
-/* =========================
-   13. FOOTER
-   ========================= */
-footer {
-    background-color: var(--primary-dark);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-footer a {
-    color: var(--accent);
-}
-
-
-/* =========================
-   14. KEYBOARD FOCUS STATES
-   ========================= */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
-
-
-/* =========================
-   15. TABLET BREAKPOINT
-   ========================= */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 30px;
-    }
-
-    #intro h2 {
-        font-size: 26px;
-    }
-
-    .photo-gallery img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-
-/* =========================
-   16. MOBILE BREAKPOINT
-   ========================= */
-@media (max-width: 600px) {
-
-    nav a {
-        display: block;
-        margin: 8px;
-    }
-
-    .photo-gallery {
-        display: block;
-    }
-
-    .photo-gallery img {
-        width: 100%;
-        height: auto;
-    }
-
-    section {
-        padding: 15px;
-    }
-}
-/* =========================
-   17. FORM VALIDATION ERRORS
-   ========================= */
-.error {
-    display: block;
-    color: #c0392b;
-    font-size: 14px;
-    margin-bottom: 10px;
-    min-height: 1em;
-}
-
-input.invalid,
-textarea.invalid {
-    border: 2px solid #c0392b;
-    background-color: #fdecea;
-}
-
-input.valid,
-textarea.valid {
-    border: 2px solid #27ae60;
-    background-color: #eafaf1;
-}
-
-#form-preview {
+#calc-result {
     margin-top: 20px;
-    padding: 15px 20px;
-    border-left: 5px solid #27ae60;
-    background-color: #eafaf1;
-    border-radius: 6px;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
     display: none;
 }
 
-#form-preview.show {
-    display: block;
+#calc-result.show { display: block; }
+
+/* ===== PROJECT CARDS ===== */
+.project-card {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border-left: 4px solid #6ab0ff;
 }
 
-#form-preview h3 {
-    margin-top: 0;
-    color: #1e7a45;
-}
-
-#form-preview p {
-    margin: 6px 0;
-}
-/* =========================
-   18. EXPANDABLE CONTENT
-   ========================= */
 .toggle-btn {
-    background-color: var(--primary);
-    color: white;
+    background-color: #444;
+    color: #e0e0e0;
     border: none;
     padding: 8px 16px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 14px;
-    margin-top: 8px;
+    font-family: inherit;
+    margin-top: 10px;
+    transition: background 0.3s;
 }
 
-.toggle-btn:hover,
-.toggle-btn:focus {
-    background-color: var(--primary-dark);
-}
+.toggle-btn:hover { background-color: #555; }
 
 .details {
-    margin-top: 12px;
-    padding: 12px 16px;
-    background-color: #f0f4ff;
-    border-left: 4px solid var(--primary);
-    border-radius: 4px;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    border: 1px solid #444;
 }
 
-.details p {
-    margin: 0;
+/* ===== PHOTO GALLERY ===== */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-/* =========================
-   19. GALLERY VIEWER
-   ========================= */
+
+.photo-gallery figure {
+    background-color: #2b2b2b;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #444;
+    width: 30%;
+    min-width: 150px;
+    text-align: center;
+}
+
+.photo-gallery img { width: 100%; height: auto; display: block; }
+figcaption { padding: 10px; font-size: 0.9rem; color: #aaaaaa; }
+
 .gallery-viewer {
     text-align: center;
-    margin-top: 15px;
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #444;
 }
 
-.gallery-img {
+#gallery-image {
     max-width: 100%;
-    width: 500px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid var(--primary);
-    display: block;
-    margin: 0 auto 12px;
+    height: auto;
+    max-height: 400px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
 }
+
+#gallery-image.hidden { opacity: 0; }
 
 #gallery-caption {
-    font-style: italic;
-    color: var(--muted);
-    margin-bottom: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #8cc4ff;
 }
 
 .gallery-controls {
@@ -495,129 +284,139 @@ textarea.valid {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    flex-wrap: wrap;
 }
 
 .gallery-controls button {
-    padding: 10px 20px;
-    background-color: var(--primary);
-    color: white;
+    background-color: #6ab0ff;
+    color: #1f1f1f;
     border: none;
-    border-radius: 6px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 15px;
+    font-family: inherit;
+    transition: background 0.3s;
 }
 
-.gallery-controls button:hover,
-.gallery-controls button:focus {
-    background-color: var(--primary-dark);
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
-
-.gallery-controls button:disabled {
-    background-color: #aaa;
-    cursor: not-allowed;
-    opacity: 0.6;
-}
+.gallery-controls button:hover { background-color: #8cc4ff; }
 
 #gallery-counter {
-    font-weight: bold;
-    color: var(--primary);
-}
-/* =========================
-   20. STUDY HOURS CALCULATOR
-   ========================= */
-.calculator {
-    max-width: 500px;
-    margin-top: 15px;
-    padding: 20px;
-    background-color: #f0f4ff;
-    border-left: 5px solid var(--primary);
-    border-radius: 6px;
+    font-weight: 600;
+    color: #aaaaaa;
+    min-width: 50px;
 }
 
-.calculator label {
+/* ===== MEDIA ===== */
+video {
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.calculator input {
     width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    box-sizing: border-box;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: #1f1f1f;
 }
 
-#calc-btn {
-    margin-top: 15px;
-    padding: 10px 22px;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 15px;
+audio {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    margin-bottom: 15px;
 }
 
-#calc-btn:hover,
-#calc-btn:focus {
-    background-color: var(--primary-dark);
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
-
-#calc-result {
-    margin-top: 15px;
-    font-weight:
-    /* =========================
-   20. STUDY HOURS CALCULATOR
-   ========================= */
-.calculator {
-    margin-top: 25px;
-    padding: 20px;
-    background-color: #f0f4ff;
-    border-left: 5px solid var(--primary);
-    border-radius: 6px;
+/* ===== CONTACT FORM ===== */
+#contact-form {
+    display: flex;
+    flex-direction: column;
     max-width: 500px;
+    margin-top: 20px;
 }
 
-.calculator h3 {
-    margin-top: 0;
-    color: var(--primary);
+#contact-form label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #8cc4ff;
 }
 
-.calculator input {
-    width: 100%;
+#contact-form input,
+#contact-form textarea {
     padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    font-family: inherit;
 }
 
-#calc-btn {
-    padding: 10px 20px;
-    background-color: var(--primary);
-    color: white;
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #6ab0ff;
+}
+
+#contact-form button {
+    background-color: #6ab0ff;
+    color: #1f1f1f;
     border: none;
-    border-radius: 6px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
+    font-family: inherit;
+    margin-top: 10px;
+    transition: background 0.3s;
 }
 
-#calc-btn:hover,
-#calc-btn:focus {
-    background-color: var(--primary-dark);
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
+#contact-form button:hover { background-color: #8cc4ff; }
+
+.error {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    min-height: 18px;
 }
 
-#calc-result {
+#form-preview {
     margin-top: 15px;
-    font-weight: bold;
-    color: #27ae60;
-    min-height: 1.2em;
+    font-weight: 600;
+    color: #6ab0ff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    border: 1px solid #444;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+
+footer a { color: #6ab0ff; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header h1 { font-size: 1.6rem; }
+    .photo-gallery figure { width: 100%; }
+    .gallery-controls { flex-direction: column; }
+    .gallery-controls button { width: 100%; }
+}
+/* Result box for calculator */
+#calc-result {
+    margin-top: 20px;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    display: none;   /* Hidden until we calculate */
+}
+
+/* This class makes it appear */
+#calc-result.show {
+    display: block;
 }
